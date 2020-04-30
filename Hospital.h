@@ -143,16 +143,16 @@ void Hospital::agregaMedico(int id, string nombre, string especialidad, string t
 
 //Método para agregar objetos de tipo enfermero
 void Hospital::agregaEnfermero(int id,string nombre, string turno, string area){
-    ienf += 1;
-    Enfermero aux(id, nombre, turno, area);
-    enf[ienf] = aux;
+	ienf += 1;
+	Enfermero aux(id, nombre, turno, area);
+	enf[ienf] = aux;
 }
 
 //Método para agregar objetos de tipo practicante
 void Hospital::agregaPracticante(int id, string nombre, float numHrs){
-    ipract += 1;
-    Practicantes aux(id, nombre, numHrs);
-    pract[ipract] = aux;
+	ipract += 1;
+	Practicantes aux(id, nombre, numHrs);
+	pract[ipract] = aux;
 }
 
 //Método para agregar objetos de tipo insumo
@@ -170,4 +170,4 @@ void Hospital::agregaMobiliario(int cantidad, double precio,string tipo){
 }
 
 
-#endif // EMPRESA_H_
+#endif // HOSPITAL_H_
