@@ -1,6 +1,6 @@
 //Iniciar el archivo personal
-#ifndef Personal_H
-#define Personal_H
+#ifndef PERSONAL_H
+#define PERSONAL_H
 
 #include <string>
 #include <sstream>
