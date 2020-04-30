@@ -1,3 +1,4 @@
+//Iniciar el archivo personal
 #ifndef Personal_H
 #define Personal_H
 
@@ -6,216 +7,216 @@
 
 using namespace std;
 
-//Definir la clase producto que sera la clase padre, junto con sus atributos y getters
+//Clase personal, clase padre
 class Personal{
-    protected:
+	protected:
 		int id;
-        string nombre;
-    public:
-        Personal();
-        Personal(int is, string nom);
+        	string nombre;
+	
+	public:
+        	Personal();
+       		Personal(int is, string nom);
 
-        string getNombre() const;
-        int getId() const;
+        	string getNombre() const;
+        	int getId() const;
 		string toString() const;
 };
 
 //Constructor por default
 Personal::Personal(){
 	id=0;
-    nombre="";
+	nombre="";
 
 }
 
 //Constructor con variables establecidas
 Personal::Personal(int is, string nom){
-    is=id;
-    nom=nombre;
+	is=id;
+	nom=nombre;
 }
 
 //Definir los getters conforme a la clase
 string Personal::getNombre()const{
-    return nombre;
+	return nombre;
 }
 
+//Definir los getters conforme a la clase
 int Personal::getId() const{
-    return id;
+	return id;
 }
 
 
-//Establecer método para poder imprimir los getters del objeto
+//Establecer mÃ©todo para poder imprimir los getters del objeto
 string Personal::toString()const{
-    stringstream aux;
-    aux << id << " - "<< nombre << "\n";
-    return aux.str();
+	stringstream aux;
+	aux << id << " - "<< nombre << "\n";
+	return aux.str();
 }
 
-//Definir la clase perfume que es hija de la clase producto, pero con la variable aroma como diferencia
+//Clase medico, es la hija de personal
 class Medico: public Personal{
-    protected:
-        string especialidad;
+	protected:
+        	string especialidad;
 		string turno;
+    	public:
+        	Medico();
+        	Medico(int is, string nom, string esp, string t);
 
-    public:
-
-        Medico();
-        Medico(int is, string nom, string esp, string t);
-
-        int getId()const;
-        string getNombre() const;
-        string getEsp()const;
-        string getTurno() const;
-        string toString()const;
+        	int getId()const;
+        	string getNombre() const;
+        	string getEsp()const;
+        	string getTurno() const;
+        	string toString()const;
 };
 
 //Constructor por default
 Medico::Medico(){
 	id=0;
-    nombre="";
-    especialidad="";
-    turno="";
+	nombre="";
+	especialidad="";
+	turno="";
 }
 
 //Constructor cuando las variables se reciben
 Medico::Medico(int is, string nom, string esp, string t){
 	id=is;
-    nombre=nom;
-    especialidad=esp;
-    turno=t;
+    	nombre=nom;
+    	especialidad=esp;
+    	turno=t;
 
 }
 
 //Getters de la clase
 int Medico::getId()const{
-    return id;
+    	return id;
 }
 
+//Getters de la clase
 string Medico::getNombre()const{
-    return nombre;
+    	return nombre;
 }
 
+//Getters de la clase
 string Medico::getEsp() const{
-    return especialidad;
+    	return especialidad;
 }
 
+//Getters de la clase
 string Medico::getTurno() const{
-    return turno;
+    	return turno;
 }
 
 //Definir un metodo para imprimir los getters y agregar funcionalidad
 string Medico::toString()const{
-    stringstream aux;
-    aux << "Medico: "<< "\n"<<nombre << " - "<< id << " con especialidad: " << especialidad << " del Turno: " << turno << "\n";
-    return aux.str();
+    	stringstream aux;
+    	aux << "Medico: "<< "\n"<<nombre << " - "<< id << " con especialidad: " << especialidad << " del Turno: " << turno << "\n";
+    	return aux.str();
 }
 
 
-//Establecer la clase labial con herencia de producto, con la diferencia de la variable color
+//Clase enfermero, clase hija de personal
 class Enfermero: public Personal{
-    protected:
-        string area;
+	protected:
+        	string area;
 		string turno;
+   	public:
+        	Enfermero();
+        	Enfermero(int is, string nom, string a, string t);
 
-    public:
-
-        Enfermero();
-        Enfermero(int is, string nom, string a, string t);
-
-        int getId()const;
-        string getNombre() const;
-        string getArea()const;
-        string getTurno() const;
-        string toString()const;
+        	int getId()const;
+        	string getNombre() const;
+        	string getArea()const;
+        	string getTurno() const;
+        	string toString()const;
 };
 
 //Constructor por default
 Enfermero::Enfermero(){
 	id=0;
-    nombre="";
-    area="";
-    turno="";
+    	nombre="";
+    	area="";
+    	turno="";
 }
 
 //Constructor con valores dados por el usuario
 Enfermero::Enfermero(int is, string nom, string a, string t){
 	id=is;
-    nombre=nom;
-    area=a;
-    turno=t;
+    	nombre=nom;
+    	area=a;
+    	turno=t;
 }
 
 //Getters de la clase
 int Enfermero::getId()const{
-    return id;
+    	return id;
 }
 
+//Getters de la clase
 string Enfermero::getNombre()const{
-    return nombre;
+    	return nombre;
 }
 
+//Getters de la clase
 string Enfermero::getArea() const{
-    return area;
+    	return area;
 }
 
+//Getters de la clase
 string Enfermero::getTurno() const{
-    return turno;
+   	return turno;
 }
 
-
+//Metodo para imprimir los getters
 string Enfermero::toString()const{
-    stringstream aux;
-    aux << "Enfermero: " << "\n"
-    << nombre << "-"<< id << " se encuentra en el area de " << turno << " en el turno " << area << "\n";
-    return aux.str();
+    	stringstream aux;
+    	aux << "Enfermero: " << "\n"
+    	<< nombre << "-"<< id << " se encuentra en el area de " << turno << " en el turno " << area << "\n";
+    	return aux.str();
 }
 
 
-//Definir clase sombras con herencia de la clase producto pero con la variable tonos
+//Clase practicantes, clase hija de personal
 class Practicantes: public Personal{
-    protected:
-        float numHoras;
+    	protected:
+        	float numHoras;
+    	public:
+        	Practicantes();
+        	Practicantes(int is, string nom, float nHras);
 
-    public:
-
-        Practicantes();
-        Practicantes(int is, string nom, float nHras);
-
-        string getNombre() const;
-        float getHrs();
+       		string getNombre() const;
+        	float getHrs();
 		string toString()const;
 };
 
 //Constructor por default
 Practicantes::Practicantes(){
 	id=0;
-    nombre="";
+    	nombre="";
 	numHoras=0.0;
 }
 
 //Constructor recibiendo valores
 Practicantes::Practicantes(int is, string nom, float nHras){
-    id=is;
-    nombre=nom;
-    numHoras=nHras;
+    	id=is;
+    	nombre=nom;
+    	numHoras=nHras;
 }
 
-//Getters de la nueva clase
+//Getters de la clase
 string Practicantes::getNombre()const{
-    return nombre;
+    	return nombre;
 }
 
-
+//Getters de la clase
 float Practicantes::getHrs(){
-    return numHoras;
+    	return numHoras;
 }
 
 //Metodo para imprimir los getters de la clase
 string Practicantes::toString()const{
-    stringstream aux;
-    aux << "Practicante:" << "\n"<< nombre << " - "<< id << " tiene un total de " << numHoras << " horas acumuladas " << "\n";
-    return aux.str();
+    	stringstream aux;
+    	aux << "Practicante:" << "\n"<< nombre << " - "<< id << " tiene un total de " << numHoras << " horas acumuladas " << "\n";
+    	return aux.str();
 }
 
-//Terminar la clase con herencia ff+
-#endif
-
+#endif // PERSONAL_H_
