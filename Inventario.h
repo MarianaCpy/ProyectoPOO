@@ -1,3 +1,4 @@
+//definimos archivo inventario
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 
@@ -6,7 +7,7 @@
 
 using namespace std;
 
-//Definir la clase producto que sera la clase padre, junto con sus atributos y getters
+//Clase inventario, clase padre
 class Inventario{
     protected:
         string tipo;
@@ -41,25 +42,26 @@ int Inventario::getCant()const{
     return cantidad;
 }
 
+//Definir getter con respecto a la clase
 double Inventario::getPrecio() const{
     return precio;
 }
 
+//Definir getter de acuerdo a la clase
 string Inventario::getTipo(){
     return tipo;
 }
 
-//Establecer método para poder imprimir los getters del objeto
+//MÃ©todo para poder imprimir los getters del objeto
 string Inventario::toString()const{
     stringstream aux;
     aux << "Hay " << cantidad << tipo <<" de costo "<< precio<< "\n";
     return aux.str();
 }
 
-//Definir la clase perfume que es hija de la clase producto, pero con la variable aroma como diferencia
+//Clase insumos que recibe la herencia de inventario, es la clase hija
 class Insumos: public Inventario{
     public:
-
         Insumos(int c, double p,string t);
         Insumos();
 
@@ -76,6 +78,7 @@ Insumos::Insumos(){
     tipo="";
 }
 
+//Constructor con valores
 Insumos::Insumos(int c, double p,string t){
     cantidad=c;
     precio=p;
@@ -87,24 +90,26 @@ int Insumos::getCantidad()const{
     return cantidad;
 }
 
+//Definir los getters conforme a la clase
 double Insumos::getPrecio(){
     return precio;
 }
 
+//Definir los getters conforme a la clase
 string Insumos::getTipo()const{
     return tipo;
 }
 
-//Establecer método para poder imprimir los getters del objeto
+//Establecer mÃ©todo para poder imprimir los getters del objeto
 string Insumos::toString()const{
     stringstream aux;
-    aux << "Hay " << cantidad << tipo <<" de costo "<< precio<< endl;
+    aux << "Hay " << cantidad << tipo << " de costo " << precio << endl;
     return aux.str();
 }
 
+//Clase mobiliario recibe herencia de clase inventario,
 class Mobiliario: public Inventario{
     public:
-
         Mobiliario(int c, double p,string t);
         Mobiliario();
 
@@ -121,6 +126,7 @@ Mobiliario::Mobiliario(){
     tipo="";
 }
 
+//Constructor que recibe valores
 Mobiliario::Mobiliario(int c, double p,string t){
     cantidad=c;
     precio=p;
@@ -132,19 +138,21 @@ int Mobiliario::getCantidad()const{
     return cantidad;
 }
 
+//Definir los getters conforme a la clase
 double Mobiliario::getPrecio(){
     return precio;
 }
 
+//Definir los getters conforme a la clase
 string Mobiliario::getTipo()const{
     return tipo;
 }
 
-//Establecer método para poder imprimir los getters del objeto
+//Establecer mÃ©todo para poder imprimir los getters del objeto
 string Mobiliario::toString()const{
     stringstream aux;
-    aux << "Hay " << cantidad << tipo <<" con costo de "<< precio<< endl;
+    aux << "Hay " << cantidad << tipo << " con costo de " << precio << endl;
     return aux.str();
 }
 
-#endif
+#endif // INVENTARIO_H_
