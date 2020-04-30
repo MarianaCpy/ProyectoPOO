@@ -107,15 +107,15 @@ void Hospital::showEnf(){
 
 //Método con un ciclo que recorre el arreglo e imprime cada objeto.
 void Hospital::showMed(){
-    for(int i=0; i<=imed;i++){
-        cout << med[i].toString();
+	for(int i=0; i<=imed;i++){
+		cout << med[i].toString();
     }
 }
 
 //Método con un ciclo que recorre el arreglo e imprime cada objeto.
 void Hospital::showPact(){
-    for(int i=0; i<=ipract;i++){
-        cout << pract[i].toString();
+	for(int i=0; i<=ipract;i++){
+		cout << pract[i].toString();
     }
 
 }
