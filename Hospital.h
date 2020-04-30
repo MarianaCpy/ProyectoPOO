@@ -57,11 +57,11 @@ Hospital::Hospital(){
 
 //Método para crear objetos de tipo médico
 void Hospital::creaMed(){
-    med[0]= Medico(1232, "Rosa", "General","Mat");
-    imed+=1;
-    med[1]= Medico(2324, "Maria", "Pediatria","Noct");
-    imed+=1;
-    med[2]= Medico(5432, "Juan", "Oncologo","Mat");
+	med[0]= Medico(1232, "Rosa", "General","Mat");
+	imed+=1;
+	med[1]= Medico(2324, "Maria", "Pediatria","Noct");
+	imed+=1;
+	med[2]= Medico(5432, "Juan", "Oncologo","Mat");
 }
 
 //Método para crear objetos de tipo practicantes
