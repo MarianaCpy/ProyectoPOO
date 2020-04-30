@@ -57,7 +57,7 @@ Hospital::Hospital(){
 
 //Método para crear objetos de tipo médico
 void Hospital::creaMed(){
-	med[0]= Medico(1232, "Rosa", "General","Mat");
+	med[0]= Medico(1232, "Martha", "General","Mat");
 	imed+=1;
 	med[1]= Medico(2324, "Maria", "Pediatria","Noct");
 	imed+=1;
@@ -79,7 +79,7 @@ void Hospital::creaEnf(){
     	ienf += 1;
 	enf[1] = Enfermero(1219, "Guadalupe", "Noct", "Urgencias");
    	ienf += 1;
-	enf[2] = Enfermero(4312, "Martha", "Mat", "Piso");
+	enf[2] = Enfermero(4312, "Humberto", "Mat", "Piso");
 }
 
 //Método para crear  objetos del tipo insumo
