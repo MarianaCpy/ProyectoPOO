@@ -48,11 +48,11 @@ class Hospital{
 
 //Constructor
 Hospital::Hospital(){
-    imed = 0;
-    ienf=0;
-    ipract =0;
-    ins=0;
-    imob=0;
+	imed = 0;
+	ienf=0;
+	ipract =0;
+	ins=0;
+	imob=0;
 }
 
 //Método para crear objetos de tipo médico
