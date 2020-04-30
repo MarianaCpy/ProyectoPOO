@@ -66,11 +66,11 @@ void Hospital::creaMed(){
 
 //Método para crear objetos de tipo practicantes
 void Hospital::creaPract(){
-    pract[0]= Practicantes(234, "Estefania", 36.5);
-    ipract += 1;
-    pract[1]= Practicantes(124, "Alberto", 19.2);
-    ipract += 1;
-    pract[2]= Practicantes(214, "David", 52.3);
+	pract[0]= Practicantes(234, "Estefania", 36.5);
+	ipract += 1;
+	pract[1]= Practicantes(124, "Alberto", 19.2);
+	ipract += 1;
+	pract[2]= Practicantes(214, "David", 52.3);
 }
 
 //Método para crear objetos de tipo enfermero
